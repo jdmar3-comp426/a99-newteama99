@@ -10,6 +10,8 @@
     "license": "GPL-3.0-or-later",
     "dependencies": {
         "better-sqlite3": "^7.4.5",
+        "browser-sync": "^2.27.7",
+        "bulma": "^0.9.3",
         "express": "^4.17.1",
         "md5": "^2.3.0"
     }
