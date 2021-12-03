@@ -18,15 +18,24 @@
             <h1 style="margin: 20px;">Login to Team A99's Final Project!</h1>
             <div class="box" style="width: 400px; margin: auto;">
                 <form id="login-form">
-                    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-                    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-                    <input type="submit" value="Login" id="login-form-submit">
-                  </form>
+                    <p class="content is-medium">Login</p>
+                    <div class="control">
+                    <input type="text" name="username" id="username-field" class="login-form-field input mb-4" placeholder="Username">
+                    </div>
+                    <div>
+                    <input type="password" name="password" id="password-field" class="login-form-field mb-4 input" placeholder="Password">
+                    </div>
+                    <input class="button mb-4" type="submit" value="Login" id="login-form-submit">
+                </form>
                
                 </form>
-                <div id="login-error-msg-holder">
-                    <p id="login-error-msg" style = "opacity: 0;">Invalid login</p>
+                <div id="login-error-msg-holder" class="mb-2">
+                    <p id="login-error-msg" style = "opacity: 0; color: red;">Invalid login</p>
                 </div>
+                <form>
+                    <p class="content is-medium mb-4">Don't have an account?</p>
+                    <button href="newuser.html" class="button" value="New Account"><a href="newuser.html">New Account</a></button>
+                </form>
             </div>
         </div>
     </div>
