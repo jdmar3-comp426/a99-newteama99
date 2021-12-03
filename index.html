@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="custom_style.css">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
+    <script defer src="login.js"></script>
     <title>A99</title>
 </head>
 
@@ -16,24 +17,16 @@
         <div class="title" style="width: auto; text-align: center;">
             <h1 style="margin: 20px;">Login to Team A99's Final Project!</h1>
             <div class="box" style="width: 400px; margin: auto;">
-                <div class="form">
-                <div class="field">
-                    <label class="label">Username</label>
-                    <div class="control">
-                        <input class="input" type="email" placeholder="Username">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Password</label>
-                    <div class="control">
-                        <input class="input" type="password" placeholder="********">
-                    </div>
-                </div>
-                </div>
-
-                <button class="button is-dark"><a href="game.html">Sign In</a></button>
+                <form id="login-form">
+                    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+                    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+                    <input type="submit" value="Login" id="login-form-submit">
+                  </form>
+               
                 </form>
+                <div id="login-error-msg-holder">
+                    <p id="login-error-msg" style = "opacity: 0;">Invalid login</p>
+                </div>
             </div>
         </div>
     </div>
