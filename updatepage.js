@@ -10,6 +10,6 @@ updateButton.addEventListener("click", (e) => {
     const username = updateForm.username.value;
     const password = updateForm.password.value;
 
-        updateSuccessMsg.style.opacity = 1;
+    updateSuccessMsg.style.opacity = 1;
     
 })

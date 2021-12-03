@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="custom_style.css">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
+    <script defer src="register.js"></script>
     <title>A99</title>
 </head>
 
@@ -16,24 +17,19 @@
         <div class="title" style="width: auto; text-align: center;">
             <h1 style="margin: 20px;">Create a New Account</h1>
             <div class="box" style="width: 400px; margin: auto;">
-                <div class="form">
-                <div class="field">
-                    <label class="label">Username</label>
-                    <div>
-                        <input class="input" placeholder="Username">
+                <form id="register-form">
+                    <p class="content is-medium">Login</p>
+                    <div class="control">
+                    <input type="text" name="username" id="username-field" class="login-form-field input mb-4" placeholder="Username">
                     </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Password</label>
                     <div>
-                        <input class="input mb-4" type="password" placeholder="********">
+                    <input type="password" name="password" id="password-field" class="login-form-field mb-4 input" placeholder="Password">
                     </div>
-                </div>
-                </div>
-
-                <button class="button"><a href="index.html"><a href="index.html">Submit</a></button>
+                    <input class="button mb-4" type="submit" value="Register" id="register-form-submit">
                 </form>
+                <div id="login-error-msg-holder" class="mb-2">
+                    <p id="register-error-msg" style = "opacity: 0; color: red;">Please enter a valid username and password</p>
+                </div>
             </div>
         </div>
     </div>
