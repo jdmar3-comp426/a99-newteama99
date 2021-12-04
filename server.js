@@ -6,10 +6,11 @@ var db = require("./database.js")
 // Require md5 MODULE
 var md5 = require("md5");
 const { readonly } = require("./database.js");
+const cors = require("cors");
 // Make Express use its own built-in body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(cors());
 
 // Set server port
 var HTTP_PORT = 5000;
