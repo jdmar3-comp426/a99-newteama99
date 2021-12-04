@@ -1,21 +1,26 @@
-const registerForm = document.getElementById("register-form");
-const registerButton = document.getElementById("register-form-submit");
-const registerErrorMsg = document.getElementById("register-error-msg");
 
-// When the login button is clicked, the following code is executed
-registerButton.addEventListener("click", (e) => {
-    // Prevent the default submission of the form
-    e.preventDefault();
-    // Get the values input by the user in the form fields
-    const username = registerForm.username.value;
-    const password = registerForm.password.value;
-    if (username.length > 0 && password.length > 0) {
-        // If the credentials are valid, return to login   
-           
-        location.replace("index.html");
-    } else {
-        // Otherwise, make the login error message show (change its oppacity)
-        registerErrorMsg.style.opacity = 1;
-    }
+window.addEventListener("load", function () {
+  
+    function sendData() {
+        const sendRequest = new XMLHttpRequest();
+        const signupInfo = new FormData(registerForm);
+
+        sendRequest.addEventListener("error", function (event) {
+            alert('Submission unsuccessful! Please try again.');
+        });
+        sendRequest.addEventListener("load", function (event) {
+            alert('Your account was created!');
+        });
+
+        sendRequest.open("POST", "http://localhost:5000/app/new");
+        sendRequest.send(signupInfo);
+    }   
+
+    const registerForm = document.getElementById("signup");
+
+    registerForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        sendData();
+    });
     
-})
+});

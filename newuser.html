@@ -17,19 +17,14 @@
         <div class="title" style="width: auto; text-align: center;">
             <h1 style="margin: 20px;">Create a New Account</h1>
             <div class="box" style="width: 400px; margin: auto;">
-                <form id="register-form">
-                    <p class="content is-medium">Login</p>
-                    <div class="control">
-                    <input type="text" name="username" id="username-field" class="login-form-field input mb-4" placeholder="Username">
-                    </div>
-                    <div>
-                    <input type="password" name="password" id="password-field" class="login-form-field mb-4 input" placeholder="Password">
-                    </div>
-                    <input class="button mb-4" type="submit" value="Register" id="register-form-submit">
+                <p class="content is-medium">Register</p>
+                <form id="signup">
+                    <input name="user" id="user" class="login-form-field input mb-4">
+                    <input type="password" name="pass" id="pass" class="login-form-field mb-4 input">
+                    <input type="text" name="email" id="email" class="login-form-field mb-4 input">
+                    <input name = "submit" class="button mb-4" type="submit" value="Submit" id="submit">
                 </form>
-                <div id="login-error-msg-holder" class="mb-2">
-                    <p id="register-error-msg" style = "opacity: 0; color: red;">Please enter a valid username and password</p>
-                </div>
+                <button><a href="index.html">Return</a></button>
             </div>
         </div>
     </div>

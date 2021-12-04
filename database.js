@@ -17,11 +17,12 @@ if (row === undefined) {
 // second table contains save data
     const sqlInit = `
         CREATE TABLE userinfo ( id INTEGER PRIMARY KEY, user TEXT, pass TEXT , email TEXT, guesses INTEGER, first_row INTEGER, second_row INTEGER, third_row INTEGER, fourth_row INTEGER, fifth_row INTEGER, sixth_row INTEGER, seventh_row INTEGER, eighth_row INTEGER, ninth_row INTEGER);
-    `;
+        INSERT INTO userinfo(user, pass email) VALUES ('admin', 'bdc87b9c894da5168059e00ebffb9877', 'admin@somedomain.com', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) 
+        `;
 // Execute SQL commands that we just wrote above.
     db.exec(sqlInit);
 // Echo information about what we just did to the console.
-    console.log('Your database has been initialized with a new table and two entries containing a username and password.');
+    console.log('Your database has been initialized with a new table and two entries containing a username, password, and email address.');
 } else {
 // Since the database already exists, echo that to the console.
     console.log('Database exists.')
