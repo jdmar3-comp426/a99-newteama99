@@ -1,27 +1,22 @@
 
 window.addEventListener("load", function () {
   
-    function sendData() {
-        const sendRequest = new XMLHttpRequest();
-        const signupInfo = new URLSearchParams(new FormData(registerForm));
-
-        sendRequest.addEventListener("error", function (event) {
-            alert('Submission unsuccessful! Please try again.');
-        });
-        sendRequest.addEventListener("load", function (event) {
-            alert('Your account was created!');
-        });
-
-        sendRequest.open("DELETE", "http://localhost:5000/app/delete/user/:id", true);
-        sendRequest.send(signupInfo);
+    var url = window.location.href.indexOf("?id");
+    var userID = window.location.href.substring(url+4);
+    
+    async function deleteUser() {
+       const response = await fetch('http://localhost:5000/app/delete/user/' + userID, {
+           method: 'DELETE'
+       });
 
     };  
 
     const registerForm = document.getElementById("signup");
 
-    registerForm.addEventListener("submit", function(event) {
+    registerForm.addEventListener("click", function(event) {
         event.preventDefault();
-        sendData();
+        deleteUser();
+        location.replace("index.html");
     });
     
 });
