@@ -20,17 +20,18 @@ window.addEventListener("load", function () {
             const username = loginForm.username.value;
             const password = loginForm.password.value;
             let check = false;
-            
+            let idswitch;
             for (let i = 0; i<data.length; i++) {
                 if (username === data[i].user && MD5(password) === data[i].pass) {
                     // If the credentials are valid, show an alert box and reload the page
                     check = true;
+                    idswitch = data[i].id;
                 }
             }
 
             if (check) {
                 // If the credentials are valid, show an alert box and reload the page
-                location.replace("game.html");
+                location.replace("game.html?id=" + idswitch);
             } else {
                 // Otherwise, make the login error message show (change its oppacity)
                 loginErrorMsg.style.opacity = 1;
