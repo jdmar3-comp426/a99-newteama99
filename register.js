@@ -1,5 +1,7 @@
 
 window.addEventListener("load", function () {
+    
+    //XML Request to Pst a new user to database
     function sendData() {
         const sendRequest = new XMLHttpRequest();
         const signupInfo = new URLSearchParams(new FormData(registerForm));
@@ -8,6 +10,7 @@ window.addEventListener("load", function () {
         sendRequest.send(signupInfo);
     };  
 
+    //Gets User, pass, and email into a form object
     const registerForm = document.getElementById("signup");
 
     registerForm.addEventListener("submit", function(event) {
