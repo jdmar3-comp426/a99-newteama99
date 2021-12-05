@@ -37,7 +37,7 @@ app.post("/app/new/", (req, res, next) => {
 	//change code for our needs
 	const stmt = db.prepare("INSERT into userinfo (user, pass, email, guesses, first_row, second_row, third_row, fourth_row, fifth_row, sixth_row, seventh_row, eighth_row, ninth_row) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
     //replace 0's with actual values
-	const u = stmt.run(data.user, data.pass, data.email, 0, 600000070, 000005020, 000001000, 362000081, 509618732, 710090405, 020006510, 107800003, 450000000);
+	const u = stmt.run(data.user, data.pass, data.email, 0, JSON.stringify(600000070), 000005020, 000001000, 362000081, 509618732, 710090405, 020006510, 107800003, 450000000);
 	res.status(201).json({"message":"1 record created: ID "+u.lastInsertRowid+" (201)"});
 });
 
