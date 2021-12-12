@@ -1,54 +1,30 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6441361&assignment_repo_type=AssignmentRepo)
 # a99 Finally
 
-COMP426 final project template repository. All your code and documentation goes here. Change this text to be a brief description of your final project. Put the name in the header above. You will change everything below to be the main technical documentation, as outlined below.
+LINK TO DEMO: https://youtu.be/fetWHTt_rL8
 
-## First steps
+Notes: The full game is meant to have data saving functionality through in the database. The current game get its sudoku board from a hard-coded set of numbers and there are only 3 boards (easy, medium and hard). In the future, we would like to store a large set of sudoku boards and also have a player history for each user with their saved sudoku boards so that they can continue their progress. The game also has the functionality to change the theme (light/dark) and the amount of time allocated for the game. By clicking the digit in the number container on the right and then a cell, the user is able to enter a digit in the cell. Credit has to go to RedFlyer Coding's tutorial for aiding the with the design of the game itself and the javascript functions. Queries exist to fetch and update the boards but backend errors prevented us from finishing the entire game. If we had more time, we would connect the save game functionality to the database and also differentiate the gamefrom the tutorial more.
 
-Other steps that you will need to take after you have cloned this repository:
+Instructions: Fill in the spots on this 9x9 grid such that each row has digits 1-9, each column has digits 1-9, and each 3x3 grid of spaces has digits 1-9. Click the “save” button to save your progress.
 
-1. Choose and update the LICENSE file accordingly. 
-2. Edit this README.md file and use it as the main location of your technical documentation with links out to information contained under `/docs/`.
-3. Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.
-4. Make sure that all of your team members have access to the repository as administrators.
-5. Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and user them to manage your project.
-7. Assign team roles and include a listing of those roles in this README.md file or in another file under `/docs/`.
-8. Then put your entire development workflow in this repository.
-9. Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
-10. Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
+Product plan
+-          Game type
+-          Structure
+-          API
+Roles
+-          Backend
+-          Frontend
+Timeline
+-          4-5 days
+ 
+ 
+API Michael and Nathaniel
+Requisition old code
+User database
+          	Id Username Pw Email Guesses game_data 
+Front end (Rudra and Sam and Kishan)
+          	Login/signup
+          	Instructions
+           Game
 
-## Team mangement
 
-Plan to meet with your team ASAP.
-Talk through identifying roles within your team.
-
-Try to figure out what each of you are good at/enjoy doing and try to work out roles that incorporate that.
-
-Some basic roles you will want to consider:
-
-1. A review manager - someone to review pull requests and merge or reject them and manage the related discussions
-2. A plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date
-3. A documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented
-4. Roles for team members to take charge or different parts of the project. Possible roles:
-    1. Front end lead
-    2. Back end lead
-    3. Databse lead
-    4. Design lead
-    5. Etc.
-
-You will notice that there are more roles than people in your group.
-That is because you will all be doing a hybrid job of managing a thing while working on other things.
-
-## Check in with instructional staff
-
-Once all the groups are together, we'll assign each group to an LA to check in with as you progress through the project.
-
-We will post that so that your team can schedule a time for an initial check-in with your assigned LA. It would be a good idea also to add your LA to your repository.
-
-## Assignment instructions
-
-And that is about all you need to get started.
-
-All the rest of the assignment instructions are available at: https://comp426.johndmart.in/assignments/99
-
-Good skill, and have fun with this!
